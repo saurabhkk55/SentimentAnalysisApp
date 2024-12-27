@@ -5,7 +5,7 @@
 ![UserFeedbacks.csv](../../../../resources/static/images/SampleUserFeedbacks.png)
 
 ### Step 2: Set up your sentiment analysis API
-1. **Run the Server**: Make sure your application that processes feedback sentiment is running locally on `http://localhost:8080`.
+1. **Run the Server**: Ensure your application is running at http://localhost:8080/health and returns a health status.
 
 2. **Use Postman or Browser**: Open Postman or any HTTP client tool (like a browser).
 
