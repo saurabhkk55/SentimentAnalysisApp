@@ -2,6 +2,7 @@ package com.sentiment.application.controller;
 
 import com.sentiment.application.dto.Feedback;
 import com.sentiment.application.service.CSVService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,11 @@ public class FeedbackController {
 
     public FeedbackController(CSVService csvService) {
         this.csvService = csvService;
+    }
+
+    @GetMapping("/health")
+    public ResponseEntity<String> appHealth() {
+        return ResponseEntity.ok("Application is in running state!");
     }
 
     // http://localhost:8080/feedback-sentiments?filePath=UserFeedbacks.csv
